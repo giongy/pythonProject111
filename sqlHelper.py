@@ -1,10 +1,10 @@
 from PyQt5.QtSql import QSqlDatabase
 from PyQt5.QtWidgets import QMessageBox
 
-
 def createConnection():
     con = QSqlDatabase.addDatabase("QSQLITE")
     con.setDatabaseName("contacts.sqlite")
+
     if not con.open():
         QMessageBox.critical(
             None,
